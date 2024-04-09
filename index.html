@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votación</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Votación</h1>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <h2>Inicio</h2>
+            <p>Bienvenido a nuestra página de votación. Por favor, seleccione una opción antes de votar.</p>
+            <button onclick="mostrarVotacion()">Ir a Votación</button>
+        </section>
+
+        <section id="votacion" style="display: none;">
+            <h2>Votación</h2>
+            <form action="procesar_votacion.php" method="post">
+                <p>Seleccione su opción:</p>
+                <label for="opcion1">
+                    <input type="radio" id="opcion1" name="opcion" value="Opción 1">
+                    Opción 1
+                </label><br>
+                <label for="opcion2">
+                    <input type="radio" id="opcion2" name="opcion" value="Opción 2">
+                    Opción 2
+                </label><br>
+                <label for="opcion3">
+                    <input type="radio" id="opcion3" name="opcion" value="Opción 3">
+                    Opción 3
+                </label><br>
+                <input type="submit" value="Votar">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Votación. Todos los derechos reservados.</p>
+    </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
